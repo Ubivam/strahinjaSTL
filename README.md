@@ -18,7 +18,7 @@ Currently Implemented Features
 ## Disadvantages Over C++ STL vector
 * Slower popping times.
 
-## Implemented Methods
+# Implemented Methods
 ### Constructors
 ```cpp
   Vector();
