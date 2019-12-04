@@ -94,11 +94,11 @@ Currently Implemented Features
 ```
 ### Overloaded operators
 ```cpp
-  T& operator*() 
-  T& operator*() const
-  T* operator->() const
-  shared_ptr& operator=(const shared_ptr<T>& s_pointer)
-  bool operator == (const shared_ptr& b) const
-  bool operator != (const shared_ptr& b) const
-  friend std::ostream& operator <<(std::ostream& os, shared_ptr<T>& sp) 
+  T& operator*(); 
+  T& operator*() const;
+  T* operator->() const;
+  shared_ptr& operator=(const shared_ptr<T>& s_pointer);
+  bool operator == (const shared_ptr& b) const;
+  bool operator != (const shared_ptr& b) const;
+  friend std::ostream& operator <<(std::ostream& os, shared_ptr<T>& sp);
 ```
