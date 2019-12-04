@@ -1,7 +1,7 @@
 Custom STL C++ library
 ===================================
 <p>This is long term projet where i would implement different part of C++ standard library and publish them with GNU Public Licences, with a goal of
-crating simple and efficient implementations of known Standard Library Template Classes</p>
+crating simple and efficient implementations of known Standard Library Template Classes </p>
 
 Currently Implemented Features
 
