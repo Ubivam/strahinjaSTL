@@ -8,9 +8,9 @@ Currently Implemented Features
 # Vector
 
 ## Matches C++ STL vector
-* [Works with custom built types]
-* [Dynamic resizing when inserting elements]
-* [Implements iterators]
+* Works with custom built types
+* Dynamic resizing when inserting elements
+* Implements iterators
 
 ## Advantages Over C++ STL vector
 * Slightly faster times when inserting built in types and almost identical times when inserting custom types.
@@ -28,7 +28,7 @@ Currently Implemented Features
   ~Vector();
 ```
 ### Iterators
-```
+```cpp
   iterator begin();
   const iterator begin() const;
   iterator end();
@@ -37,7 +37,7 @@ Currently Implemented Features
   const iterator cend() const;
 ```
 ### Capacity
-```
+```cpp
   bool empty() const;
   size_t capacity() const;
   void reserve(size_t);
@@ -46,13 +46,13 @@ Currently Implemented Features
   size_t max_size() const;
 ```
 ### Modifiers
-```
+```cpp
   void clear();
   void push_back(constT&);
   void pop_back();
 ```
 ### Element Access
-```
+```cpp
   T& at(size_t n);
   const T& at(size_t n) const;
   T& operator[](int i);
@@ -79,21 +79,21 @@ Currently Implemented Features
 * not yet implemented unique_ptr and weak_ptr
 ### Implemented Methods
 ### Constructors
-  ```
+  ```cpp
   explicit shared_ptr(T* ptr = nullptr);
   shared_ptr(shared_ptr<T>& s_pointer);
   ```
 ### Count operators
- ```
+ ```cpp
   uint32_t use_count();
   T* get();
  ```
 ## Desturctor
-```
+```cpp
   ~shared_ptr();
 ```
 ### Overloaded operators
-```
+```cpp
   T& operator*() 
   T& operator*() const
   T* operator->() const
