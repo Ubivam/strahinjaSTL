@@ -1,24 +1,25 @@
-# Custom STL C++ library
+Custom STL C++ library
+===================================
 <p>This is long term projet where i would implement different part of C++ standard library and publish them with GNU Public Licences, with a goal of
 crating simple and efficient implementations of known Standard Library Template Classes</p>
 
-<h1>Currently Implemented Features </h1>
+Currently Implemented Features
 
-<h2>Vector</h2>
+#Vector
 
-<h4>Matches C++ STL vector</h4>
-* Works with custom built types
-* Dynamic resizing when inserting elements
-* Implements iterators
+##Matches C++ STL vector
+* [Works with custom built types]
+* [Dynamic resizing when inserting elements]
+* [Implements iterators]
 
-<h4>Advantages Over C++ STL vector</h4>
+##Advantages Over C++ STL vector
 * Slightly faster times when inserting built in types and almost identical times when inserting custom types.
 
-<h4>Disadvantages Over C++ STL vector</h4>
+##Disadvantages Over C++ STL vector
 * Slower popping times.
 
-<h4>Implemented Methods</h4>
-<h5>Constructors</h5>
+##Implemented Methods
+###Constructors
 ```cpp
   Vector();
   explicit Vector(size_t s);
@@ -26,7 +27,7 @@ crating simple and efficient implementations of known Standard Library Template 
   Vector<T>& operator=(const Vector<T>& arg);
   ~Vector();
 ```
-<h5>Iterators</h5>
+###Iterators
 ```
   iterator begin();
   const iterator begin() const;
@@ -35,7 +36,7 @@ crating simple and efficient implementations of known Standard Library Template 
   const iterator cbegin() const;
   const iterator cend() const;
 ```
-<h5>Capacity</h5>
+###Capacity
 ```
   bool empty() const;
   size_t capacity() const;
@@ -44,13 +45,13 @@ crating simple and efficient implementations of known Standard Library Template 
   size_t size() const;
   size_t max_size() const;
 ```
-<h5>Modifiers</h5>
+###Modifiers
 ```
   void clear();
   void push_back(constT&);
   void pop_back();
 ```
-<h5>Element Access</h5>
+###Element Access
 ```
   T& at(size_t n);
   const T& at(size_t n) const;
@@ -63,35 +64,35 @@ crating simple and efficient implementations of known Standard Library Template 
   T* data();
   const T* data() const;
 ```
-<h2>Smart Pointers</h2>
+#Smart Pointers
 
-<h4>Matches C++ STL memory</h4>
+##Matches C++ STL memory
 
 * Works with custom built types
 * Smart memory management system
 * Implemet Reference Counting method for keeping instance alive
 
-<h4>Advantages Over C++ STL memory</h4>
+##Advantages Over C++ STL memory
 * A slightly better algorithm for Reference Counting
 
-<h4>Disadvantages Over C++ STL vector</h4>
+##Disadvantages Over C++ STL vector
 * not yet implemented unique_ptr and weak_ptr
-<h4>Implemented Methods</h4>
-<h5>Constructors</h5>
+###Implemented Methods
+###Constructors
   ```
   explicit shared_ptr(T* ptr = nullptr);
   shared_ptr(shared_ptr<T>& s_pointer);
   ```
-<h5>Count operators</h5>
+###Count operators
  ```
   uint32_t use_count();
   T* get();
  ```
-<h5>Desturctor</h5>
+##Desturctor
 ```
   ~shared_ptr();
 ```
-<h5>Overloaded operators</h5>
+###Overloaded operators
 ```
   T& operator*() 
   T& operator*() const
