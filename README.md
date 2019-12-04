@@ -5,21 +5,21 @@ crating simple and efficient implementations of known Standard Library Template 
 
 Currently Implemented Features
 
-#Vector
+# Vector
 
-##Matches C++ STL vector
+## Matches C++ STL vector
 * [Works with custom built types]
 * [Dynamic resizing when inserting elements]
 * [Implements iterators]
 
-##Advantages Over C++ STL vector
+## Advantages Over C++ STL vector
 * Slightly faster times when inserting built in types and almost identical times when inserting custom types.
 
-##Disadvantages Over C++ STL vector
+## Disadvantages Over C++ STL vector
 * Slower popping times.
 
-##Implemented Methods
-###Constructors
+## Implemented Methods
+### Constructors
 ```cpp
   Vector();
   explicit Vector(size_t s);
@@ -27,7 +27,7 @@ Currently Implemented Features
   Vector<T>& operator=(const Vector<T>& arg);
   ~Vector();
 ```
-###Iterators
+### Iterators
 ```
   iterator begin();
   const iterator begin() const;
@@ -36,7 +36,7 @@ Currently Implemented Features
   const iterator cbegin() const;
   const iterator cend() const;
 ```
-###Capacity
+### Capacity
 ```
   bool empty() const;
   size_t capacity() const;
@@ -45,13 +45,13 @@ Currently Implemented Features
   size_t size() const;
   size_t max_size() const;
 ```
-###Modifiers
+### Modifiers
 ```
   void clear();
   void push_back(constT&);
   void pop_back();
 ```
-###Element Access
+### Element Access
 ```
   T& at(size_t n);
   const T& at(size_t n) const;
@@ -64,35 +64,35 @@ Currently Implemented Features
   T* data();
   const T* data() const;
 ```
-#Smart Pointers
+# Smart Pointers
 
-##Matches C++ STL memory
+## Matches C++ STL memory
 
 * Works with custom built types
 * Smart memory management system
 * Implemet Reference Counting method for keeping instance alive
 
-##Advantages Over C++ STL memory
+## Advantages Over C++ STL memory
 * A slightly better algorithm for Reference Counting
 
-##Disadvantages Over C++ STL vector
+## Disadvantages Over C++ STL vector
 * not yet implemented unique_ptr and weak_ptr
-###Implemented Methods
-###Constructors
+### Implemented Methods
+### Constructors
   ```
   explicit shared_ptr(T* ptr = nullptr);
   shared_ptr(shared_ptr<T>& s_pointer);
   ```
-###Count operators
+### Count operators
  ```
   uint32_t use_count();
   T* get();
  ```
-##Desturctor
+## Desturctor
 ```
   ~shared_ptr();
 ```
-###Overloaded operators
+### Overloaded operators
 ```
   T& operator*() 
   T& operator*() const
